@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{AF028F50-246E-4EBB-9634-09C5EA2F561A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{AF028F50-246E-4EBB-9634-09C5EA2F561A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B37FB248-F187-4FF1-88DF-35610523216A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{B37FB248-F187-4FF1-88DF-35610523216A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{BDE0C404-91E5-4190-ADA8-E73B7C362C39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{BDE0C404-91E5-4190-ADA8-E73B7C362C39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{28276A3C-DBCC-489D-B6E8-D0CF1DCA5C95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{28276A3C-DBCC-489D-B6E8-D0CF1DCA5C95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{D9489325-92AC-44F0-B593-883A8BFACDCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{D9489325-92AC-44F0-B593-883A8BFACDCD}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{24306095-2167-468C-AD26-80300DCFAE58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D9489325-92AC-44F0-B593-883A8BFACDCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9489325-92AC-44F0-B593-883A8BFACDCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9489325-92AC-44F0-B593-883A8BFACDCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24306095-2167-468C-AD26-80300DCFAE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24306095-2167-468C-AD26-80300DCFAE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24306095-2167-468C-AD26-80300DCFAE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24306095-2167-468C-AD26-80300DCFAE58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

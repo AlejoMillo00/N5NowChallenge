@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .
+      dockerfile: Api/Dockerfile
+  sqlserver:
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server
+    ports:
+      - 1433:1433
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: Local1234
+    volumes:
+      - C:/ReposSql/SQL/data:/var/opt/mssql/data
+      - C:/ReposSql/SQL/log:/var/opt/mssql/log
+      - C:/ReposSql/SQL/secrets:/var/opt/mssql/secrets

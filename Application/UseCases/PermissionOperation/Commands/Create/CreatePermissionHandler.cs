@@ -39,7 +39,7 @@ public sealed class CreatePermissionHandler : IRequestHandler<CreatePermissionRe
             EmployeeForename = request.EmployeeForename,
             EmployeeSurname = request.EmployeeSurname,
             PermissionType = permissionTypeSr.Content.Id,
-            PermissionDate = DateOnly.FromDateTime(DateTime.UtcNow),
+            PermissionDate = DateTime.UtcNow,
         };
 
         sr = await _unitOfWork

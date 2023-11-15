@@ -58,7 +58,7 @@ public sealed class UpdatePermissionHandler : IRequestHandler<UpdatePermissionRe
 
         permissionDb.EmployeeForename = request.EmployeeForename ?? permissionDb.EmployeeForename;
         permissionDb.EmployeeSurname = request.EmployeeSurname ?? permissionDb.EmployeeSurname;
-        permissionDb.PermissionDate = DateOnly.FromDateTime(DateTime.UtcNow);
+        permissionDb.PermissionDate = DateTime.UtcNow;
 
         sr = await _unitOfWork
             .PermissionCommands.UpdateAsync(permissionDb);
