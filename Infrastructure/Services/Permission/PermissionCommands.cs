@@ -14,13 +14,14 @@ internal sealed class PermissionCommands : IPermissionCommands
         _context = context;
     }
 
-    public async Task<ServiceResponse> CreateAsync(Permission permission)
+    public async Task<ServiceResponse<Permission>> CreateAsync(Permission permission)
     {
-        ServiceResponse sr = new();
+        ServiceResponse<Permission> sr = new();
         try
         {
             await _context.Permissions.AddAsync(permission);
             await _context.SaveChangesAsync();
+            sr.Content = permission;
         }
         catch (Exception ex)
         {

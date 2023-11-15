@@ -22,12 +22,23 @@ internal sealed class PermissionTypeConfiguration : IEntityTypeConfiguration<Per
             .Property(x => x.Description)
             .IsRequired();
 
-        //Relations
         builder
             .HasMany(x => x.Permissions)
             .WithOne(x => x.PermissionTypeEntity)
             .HasForeignKey(x => x.PermissionType)
             .HasConstraintName("FK_Permission_PermissionType")
             .OnDelete(DeleteBehavior.NoAction);
+
+        AddBaseData(builder);
+    }
+
+    private static void AddBaseData(EntityTypeBuilder<PermissionType> builder)
+    {
+        builder.HasData(new List<PermissionType>
+        {
+            new(){ Id = 1, Description = "Read files." },
+            new(){ Id = 2, Description = "Write files." },
+            new(){ Id = 3, Description = "Read and write files." },
+        });
     }
 }

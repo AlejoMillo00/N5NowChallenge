@@ -18,5 +18,7 @@ public static class ServiceCollectionExtension
         services.AddScoped<IPermissionCommands, PermissionCommands>();
         services.AddScoped<IPermissionQueries, PermissionQueries>();
         services.AddScoped<IPermissionUoW, PermissionUoW>();
+        services.AddSingleton<IElasticService, ElasticService>();
+        services.AddSingleton<ITopicService, TopicService>();
     }
 }

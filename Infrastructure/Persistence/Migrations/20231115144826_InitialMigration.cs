@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace Infrastructure.Persistence.Migrations
 {
     /// <inheritdoc />
@@ -43,6 +45,16 @@ namespace Infrastructure.Persistence.Migrations
                         column: x => x.PermissionType,
                         principalTable: "PermissionTypes",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.InsertData(
+                table: "PermissionTypes",
+                columns: new[] { "Id", "Description" },
+                values: new object[,]
+                {
+                    { 1, "Read files." },
+                    { 2, "Write files." },
+                    { 3, "Read and write files." }
                 });
 
             migrationBuilder.CreateIndex(

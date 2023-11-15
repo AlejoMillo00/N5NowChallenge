@@ -6,5 +6,5 @@ public sealed class PermissionDto
     public int PermissionType { get; set; }
     public string EmployeeForename { get; set; }
     public string EmployeeSurname { get; set; }
-    public DateOnly PermissionDate { get; set; }
+    public string PermissionDate { get; set; }
 }

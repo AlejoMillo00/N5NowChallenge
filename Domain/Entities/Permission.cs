@@ -1,4 +1,6 @@
-﻿namespace Domain.Entities;
+﻿using Nest;
+
+namespace Domain.Entities;
 
 public sealed class Permission
 {
@@ -7,5 +9,7 @@ public sealed class Permission
     public string EmployeeSurname { get; set; }
     public int PermissionType { get; set; }
     public DateTime PermissionDate { get; set; }
+
+    [PropertyName("permissionTypeEntity", Ignore = true)]
     public PermissionType PermissionTypeEntity { get; set; }
 }

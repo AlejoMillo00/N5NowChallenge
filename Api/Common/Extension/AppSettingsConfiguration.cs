@@ -9,5 +9,11 @@ internal static class AppSettingsConfiguration
     {
         configuration.GetSection(AppSettings.DbConfiguration)
             .Get<DbConfigurationOptions>();
+
+        configuration.GetSection(AppSettings.ElasticConfiguration)
+           .Get<ElasticConfigurationOptions>();
+
+        configuration.GetSection(AppSettings.KafkaConfiguration)
+            .Get<KafkaConfigurationOptions>();
     }
 }

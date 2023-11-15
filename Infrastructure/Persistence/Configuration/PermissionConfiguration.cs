@@ -1,12 +1,6 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Configuration;
 
@@ -41,7 +35,6 @@ internal sealed class PermissionConfiguration : IEntityTypeConfiguration<Permiss
             .Property(x => x.PermissionDate)
             .IsRequired();
 
-        //Relations
         builder
             .HasOne(x => x.PermissionTypeEntity)
             .WithMany(x => x.Permissions)

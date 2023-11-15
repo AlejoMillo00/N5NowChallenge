@@ -66,6 +66,23 @@ namespace Infrastructure.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PermissionTypes", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Read files."
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Write files."
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Read and write files."
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Permission", b =>

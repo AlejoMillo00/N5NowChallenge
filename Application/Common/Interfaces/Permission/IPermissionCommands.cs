@@ -5,6 +5,6 @@ namespace Application.Common.Interfaces;
 
 public interface IPermissionCommands
 {
-    Task<ServiceResponse> CreateAsync(Permission permission);
+    Task<ServiceResponse<Permission>> CreateAsync(Permission permission);
     Task<ServiceResponse> UpdateAsync(Permission permission);
 }
